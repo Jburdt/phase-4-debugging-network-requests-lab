@@ -64,10 +64,16 @@ developing your own process.
 
   - How I debugged:
 
+  I looked at the dev tools. The console said a server 500 error. So I went and looked at the last request I sent through. If you read it it says what line the erros is on. I changed Toys.create to Toy.create.
+
 - Update the number of likes for a toy
 
   - How I debugged:
 
+  Clicked the like button. Looked at my dev tools to see an error about unexpected end of JSON. Looked at the fetch nethod then made sure my controller action was good. I put a debugger in first to look at the params. then I looked at the rest of the controller and added render json: toy
+
 - Donate a toy to Goodwill (and delete it from our database)
 
   - How I debugged:
+  
+  Clicked the donate button. Looked at my Dev tools to see a 500 error. Looks at my rails server logs to see I didn't have a destroy action in my routes. Added destroy to routes.
